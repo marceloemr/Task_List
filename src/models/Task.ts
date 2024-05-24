@@ -29,6 +29,10 @@ export default class Task {
         return this.#done
     }
 
+    get active() {
+        return !this.#done
+    }
+
     task_done() {
         return Task.create_done(this.id, this.description)
     }

@@ -1,6 +1,22 @@
 import 'tailwindcss/tailwind.css'
+import mock_tasks from '../data/mock'
 
 export default function Home() {
+    let tasks = mock_tasks
+    tasks = tasks.remove_filter()
+
+    function render_tasks() {
+        return tasks.items.map(task => {
+            return (
+                <div key={task.id}>
+                    <span>{task.id}</span>
+                    <span> - {task.description}</span>
+                    <span> - {task.done ? 'Done' : 'Active'}</span>
+                </div>
+            )
+        })
+    }
+
     return (
         <div className={`
             flex flex-col
@@ -12,9 +28,7 @@ export default function Home() {
             to-yellow-600
             h-screen
         `}>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
+            {render_tasks()}
         </div>
     );
 }
