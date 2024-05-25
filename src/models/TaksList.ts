@@ -34,7 +34,7 @@ export default class TaskList {
         return this.filter === FilterType.ACTIVE
     }
 
-    filtr_active() {
+    filtr_active(): TaskList {
         if (this.showing_active()) {
             return this
         }
@@ -42,7 +42,7 @@ export default class TaskList {
         return new TaskList(this.#all, FilterType.ACTIVE)
     }
 
-    filter_done() {
+    filter_done(): TaskList {
         if (this.showing_done()) {
             return this
         }
@@ -50,7 +50,7 @@ export default class TaskList {
         return new TaskList(this.#all, FilterType.DONE)
     }
 
-    remove_filter() {
+    remove_filter(): TaskList {
         if (this.showing_all()) {
             return this
         }
@@ -58,9 +58,23 @@ export default class TaskList {
         return new TaskList(this.#all)
     }
 
-    remove_done() {
+    remove_done(): TaskList {
         const active = this.#all.filter(task => task.active)
         return new TaskList(active, FilterType.NONE)
+    }
+
+    add_task(task: Task): TaskList {
+        const tasks = [...this.#all]
+        tasks.push(task)
+        return new TaskList(tasks, this.filter)
+    }
+
+    modify_task(mod_task: Task): TaskList {
+        const tasks = this.#all.map(task => {
+            return task.id === mod_task.id ? mod_task : task
+        })
+
+        return new TaskList(tasks, this.filter)
     }
 
     private filter_done_tasks(tasks: Task[]): Task[] {
