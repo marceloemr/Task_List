@@ -1,9 +1,14 @@
-import 'tailwindcss/tailwind.css'
+'use client'
+
+import List from "@/components/List/List";
 import mock_tasks from '../data/mock'
+import TaskList from "@/models/TaksList";
+
+import 'tailwindcss/tailwind.css'
+import { useState } from "react";
 
 export default function Home() {
-    let tasks = mock_tasks
-    tasks = tasks.remove_filter()
+    const [tasks, set_tasks] = useState<TaskList>(mock_tasks)
 
     function render_tasks() {
         return tasks.items.map(task => {
@@ -28,7 +33,8 @@ export default function Home() {
             to-yellow-600
             h-screen
         `}>
-            {render_tasks()}
+            <List tasks={tasks}
+                  changed={(new_tasks) => {set_tasks(new_tasks)}}/>
         </div>
     );
 }
