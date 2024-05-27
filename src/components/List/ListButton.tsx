@@ -11,9 +11,9 @@ export default function ListButton(props: ListButtonProps) {
     return (
         <button onClick={props.on_click}
                 className={`
-                text-gray-500 font-semibold
-                hover:text-black
-                focus:outline-none
+                    text-gray-500 font-semibold
+                    hover:text-black
+                    focus:outline-none
                 ${border}
                 ${props.class_name}
                 `}

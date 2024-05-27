@@ -14,15 +14,14 @@ export default function ListItem(props: ListItemProps) {
     return (
         <li onClick={props.switch_status}
             className={`
-                flex items-center
-                text-black text-xl
-                p-5 border-b border-gray-400
+                flex items-center cursor-pointer
+                text-black text-xl p-5 border-b
+                border-gray-400
             `}>
             <Selection value={props.done} />
             <span className={`
                 font-light
                 ml-5
-                
                 ${text_style}
             `}>
                 {props.value}

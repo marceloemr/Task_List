@@ -1,3 +1,6 @@
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 interface SelectionProps {
     value: boolean
 }
@@ -7,14 +10,17 @@ export default function Selection(props: SelectionProps) {
 
     return (
         <div className={`
-            flex justify-center items-center
-            text-white
+            flex justify-center items-center text-white
             h-7 w-7 rounded-full cursor-pointer
             border border-gray-400
             
            ${grad} 
         `}>
-            {props.value ? 'X' : ''}
+            {props.value ?
+                <FontAwesomeIcon icon={faCheck}
+                                 size="sm"/> :
+                ''
+            }
         </div>
     )
 }

@@ -38,12 +38,12 @@ export default function ListFooter(props: ListFooterProps) {
                 </ListButton>
                 <ListButton selected={tasks.showing_active()}
                             on_click={() => changed(tasks.filter_active())}
-                            class_name={"hidden md:inline mx-4"}>
+                            class_name={"mx-4"}>
                     Active
                 </ListButton>
                 <ListButton selected={tasks.showing_done()}
                             on_click={() => changed(tasks.filter_done())}
-                            class_name={"hidden md:inline"}>
+                            class_name={""}>
                     Done
                 </ListButton>
             </>

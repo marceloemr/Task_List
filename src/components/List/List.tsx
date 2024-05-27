@@ -32,7 +32,7 @@ export default function List(props: ListProps) {
         `}>
             <ul className={`
                 w-full list-none
-                bg-white shadow-lg rounded-xl
+                bg-white shadow-lg rounded-lg
             `}>
                 {render_tasks()}
                 <ListFooter tasks={props.tasks}
