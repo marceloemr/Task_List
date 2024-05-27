@@ -1,5 +1,6 @@
 import TaskList from "@/models/TaksList";
 import ListItem from "@/components/List/ListItem";
+import ListFooter from "@/components/List/ListFooter";
 
 interface ListProps {
    tasks: TaskList
@@ -27,13 +28,15 @@ export default function List(props: ListProps) {
 
     return (
         <div className={`
-            flex w-3/5
+            flex w-3/5 items-start
         `}>
             <ul className={`
                 w-full list-none
                 bg-white shadow-lg rounded-xl
             `}>
                 {render_tasks()}
+                <ListFooter tasks={props.tasks}
+                            changed={props.changed}/>
             </ul>
         </div>
     )

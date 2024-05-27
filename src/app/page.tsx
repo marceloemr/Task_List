@@ -1,8 +1,11 @@
 'use client'
 
 import List from "@/components/List/List";
-import mock_tasks from '../data/mock'
 import TaskList from "@/models/TaksList";
+import Header from "@/components/template/Header";
+import Content from "@/components/template/Content";
+
+import mock_tasks from '../data/mock'
 
 import 'tailwindcss/tailwind.css'
 import { useState } from "react";
@@ -33,8 +36,13 @@ export default function Home() {
             to-yellow-600
             h-screen
         `}>
-            <List tasks={tasks}
-                  changed={(new_tasks) => {set_tasks(new_tasks)}}/>
+            <Header>
+                <h1>Cabecalho</h1>
+            </Header>
+            <Content>
+                <List tasks={tasks}
+                      changed={(new_tasks) => {set_tasks(new_tasks)}}/>
+            </Content>
         </div>
     );
 }

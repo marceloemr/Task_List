@@ -34,7 +34,7 @@ export default class TaskList {
         return this.filter === FilterType.ACTIVE
     }
 
-    filtr_active(): TaskList {
+    filter_active(): TaskList {
         if (this.showing_active()) {
             return this
         }
