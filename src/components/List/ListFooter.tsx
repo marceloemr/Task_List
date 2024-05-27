@@ -21,9 +21,7 @@ export default function ListFooter(props: ListFooterProps) {
                         ' tasks'
                     }
                 </span>
-                <span className="flex-1 hidden lg:inline">
-
-                </span>
+                <span className="flex-1 hidden lg:inline"></span>
             </>
         )
     }
@@ -53,11 +51,10 @@ export default function ListFooter(props: ListFooterProps) {
     function render_remove_done() {
         return (
             <>
-                <span className="flex-grow">
-                    <ListButton on_click={() => changed(tasks.remove_done())}>
-                        Remove<span className="hidden md:inline"> Done</span>
-                    </ListButton>
-                </span>
+                <span className="flex-grow"></span>
+                <ListButton on_click={() => changed(tasks.remove_done())}>
+                    Remove<span className="hidden md:inline"> Done</span>
+                </ListButton>
             </>
         )
     }

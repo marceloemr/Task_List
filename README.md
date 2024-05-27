@@ -1,20 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task List Web App
+
+A simple task management application built using React, Next.js, and Tailwind CSS.
 
 ## About the Project
 
-This project is a Task List web application, developed with Next.js, React and Tailwind.
-It's main goal is to display some of my skills with frontend development.
+This web application works as a task list, where you can insert, delete and mark as done a sequence of tasks. Support for task list pages with specific titles will be added in the future.
 
-The project is still under development, but to try it out just do:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **HTML**
+- **Javascript**
+- **React**
+- **Next.js**
+- **Tailwind CSS**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to play around with it.
+## Installation
+
+1. **Clone the repository**:
+    ```bash
+    git clone git@github.com:marceloemr/task_list.git
+    cd task_list
+    ```
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+4. Open you browser and navigate to `http://localhost:3000`.

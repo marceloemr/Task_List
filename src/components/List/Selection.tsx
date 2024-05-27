@@ -11,15 +11,13 @@ export default function Selection(props: SelectionProps) {
     return (
         <div className={`
             flex justify-center items-center text-white
-            h-7 w-7 rounded-full cursor-pointer
+            h-8 w-8 rounded-full cursor-pointer
             border border-gray-400
-            
            ${grad} 
         `}>
             {props.value ?
                 <FontAwesomeIcon icon={faCheck}
-                                 size="sm"/> :
-                ''
+                                 size="sm"/> : ''
             }
         </div>
     )

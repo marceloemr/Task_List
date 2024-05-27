@@ -20,13 +20,11 @@ export default function ListItem(props: ListItemProps) {
             `}>
             <Selection value={props.done} />
             <span className={`
-                font-light
-                ml-5
+                font-light ml-5 overflow-hidden hover:overflow-scroll
                 ${text_style}
             `}>
                 {props.value}
             </span>
-
         </li>
     )
 }

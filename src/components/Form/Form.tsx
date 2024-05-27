@@ -28,7 +28,7 @@ export default function Form(props: FormProps) {
                    onChange={e => set_description(e.target.value)}
                    onKeyDown={e => e.key === 'Enter' && create_new_task()}
                    className={`
-                       text-black py-2 px-3 w-1/2 rounded-lg border-2
+                       text-black py-2 px-3 rounded-lg border-2
                        border-purple-200 focus:outline-none text-xl
                        focus:ring-2 focus:ring-purple-600
                    `}/>
